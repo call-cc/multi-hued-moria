@@ -212,17 +212,7 @@ void playerRestOn() {
     // check for reasonable value, must be positive number
     // in range of a short, or must be -MAX_SHORT
     if (rest_num == -SHRT_MAX || (rest_num > 0 && rest_num <= SHRT_MAX)) {
-        if ((py.flags.status & config::player::status::PY_SEARCH) != 0u) {
-            playerSearchOff();
-        }
-
-        py.flags.rest = (int16_t) rest_num;
-        py.flags.status |= config::player::status::PY_REST;
-        printCharacterMovementState();
-        py.flags.food_digested--;
-
-        putStringClearToEOL("Press any key to stop resting...", Coord_t{0, 0});
-        putQIO();
+        playerRestTurns(rest_num);
 
         return;
     }
@@ -234,6 +224,24 @@ void playerRestOn() {
     messageLineClear();
 
     game.player_free_turn = true;
+}
+
+void playerRestTurns(int rest_num) {
+    if ((py.flags.status & config::player::status::PY_SEARCH) != 0u) {
+        playerSearchOff();
+    }
+
+    py.flags.rest = (int16_t) rest_num;
+    py.flags.status |= config::player::status::PY_REST;
+    printCharacterMovementState();
+    py.flags.food_digested--;
+
+    putStringClearToEOL("Press any key to stop resting...", Coord_t{0, 0});
+    putQIO();
+}
+
+void playerRestRecover() {
+    playerRestTurns(-SHRT_MAX);
 }
 
 void playerRestOff() {

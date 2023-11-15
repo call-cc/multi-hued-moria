@@ -198,6 +198,8 @@ void playerDisturb(int major_disturbance, int light_disturbance);
 void playerSearchOn();
 void playerSearchOff();
 void playerRestOn();
+void playerRestTurns(int rest_num);
+void playerRestRecover();
 void playerRestOff();
 void playerDiedFromString(vtype_t *description, const char *monster_name, uint32_t move);
 bool playerTestAttackHits(int attack_id, uint8_t level);

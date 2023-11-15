@@ -1209,6 +1209,7 @@ static char originalCommands(char command) {
             break;
         case 'M':
         case 'R':
+        case '`':
             break;
         case 'S':
             command = '#';
@@ -1782,6 +1783,9 @@ static void doCommand(char command) {
             break;
         case 'R': // (R)est a while
             playerRestOn();
+            break;
+        case '`': // (`) Rest until recovered
+            playerRestRecover();
             break;
         case '#': // (#) search toggle  (S)earch toggle
             commandToggleSearch();
