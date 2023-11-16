@@ -3,7 +3,7 @@
 _The Dungeons of Moria_ is a single player dungeon simulation originally
 written by Robert Alan Koeneke, with its first public release in 1983.
 The game was originally developed using VMS Pascal before being ported to the
-C language by James E. Wilson in 1988, and released a _Umoria_.
+C language by James E. Wilson in 1988, and released as _Umoria_.
 
 Moria/Umoria has had many variants over the years, with [_Angband_](http://rephial.org/)
 being the most well known. Umoria was also an inspiration for one the most
