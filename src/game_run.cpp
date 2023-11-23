@@ -2385,6 +2385,8 @@ static void playDungeon() {
             printCharacterStudyInstruction();
         }
 
+	printShopRestockIndicator();
+
         playerUpdateStatusFlags();
 
         // Allow for a slim chance of detect enchantment -CJS-

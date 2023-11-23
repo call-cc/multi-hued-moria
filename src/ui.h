@@ -120,6 +120,7 @@ void printCharacterPoisonedState();
 void printCharacterMovementState();
 void printCharacterSpeed();
 void printCharacterStudyInstruction();
+void printShopRestockIndicator();
 void printCharacterWinner();
 void printCharacterStatsBlock();
 void printCharacterInformation();

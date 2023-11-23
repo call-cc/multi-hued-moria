@@ -52,6 +52,9 @@ typedef struct {
     // A `true` value means a new level will be generated on next loop iteration
     bool generate_new_level;
 
+    // `true` if shops are restocked since last visit
+    bool restocked;
+
     // Floor definitions
     Tile_t floor[MAX_HEIGHT][MAX_WIDTH];
 } Dungeon_t;

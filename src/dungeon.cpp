@@ -9,7 +9,7 @@
 
 // The Dungeon global
 // Yup, this initialization is ugly, we'll fix...eventually! -MRC-
-Dungeon_t dg = Dungeon_t{0, 0, {}, -1, 0, true, {}};
+Dungeon_t dg = Dungeon_t{0, 0, {}, -1, 0, true, true, {}};
 
 // dungeonDisplayMap shrinks the dungeon to a single screen
 void dungeonDisplayMap() {

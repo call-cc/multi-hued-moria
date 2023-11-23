@@ -309,7 +309,7 @@ void printCharacterCurrentDepth() {
         (void) sprintf(depths, "%d feet", depth);
     }
 
-    putStringClearToEOL(depths, Coord_t{23, 65}, Color_Title);
+    putStringClearToEOL(depths, Coord_t{23, 69}, Color_Title);
 }
 
 // Prints status of hunger -RAK-
@@ -442,6 +442,14 @@ void printCharacterStudyInstruction() {
         putString(&blank_string[BLANK_LENGTH - 5], Coord_t{23, 59});
     } else {
         putString("Study", Coord_t{23, 59}, Color_Light_Blue);
+    }
+}
+
+void printShopRestockIndicator() {
+    if(dg.restocked) {
+        putString("S", Coord_t{23, 65}, Color_Gold);
+    } else {
+        putString(&blank_string[BLANK_LENGTH - 1], Coord_t{23, 65});
     }
 }
 

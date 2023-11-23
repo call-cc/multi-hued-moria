@@ -1111,6 +1111,9 @@ void storeEnter(int store_id) {
     int current_top_item_id = 0;
     displayStore(stores[store_id], store_owners[store.owner_id].name, current_top_item_id);
 
+    // the player has seen the shop inventory, clear the restock flag
+    dg.restocked = false;
+
     bool exit_store = false;
     while (!exit_store) {
         moveCursor(Coord_t{20, 9});

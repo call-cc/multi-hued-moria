@@ -53,6 +53,8 @@ void storeMaintenance() {
             }
         }
     }
+
+    dg.restocked = true;
 }
 
 // Returns the value for any given object -RAK-
